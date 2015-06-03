@@ -13,6 +13,9 @@
 		A80E19221B1D7C0100791A74 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A80E19211B1D7C0100791A74 /* Images.xcassets */; };
 		A80E19251B1D7C0100791A74 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A80E19231B1D7C0100791A74 /* LaunchScreen.xib */; };
 		A80E19311B1D7C0100791A74 /* IndicatorSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80E19301B1D7C0100791A74 /* IndicatorSampleTests.swift */; };
+		A80E19411B1D7CED00791A74 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A80E193C1B1D7CED00791A74 /* SVIndefiniteAnimatedView.m */; };
+		A80E19421B1D7CED00791A74 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A80E193E1B1D7CED00791A74 /* SVProgressHUD.bundle */; };
+		A80E19431B1D7CED00791A74 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A80E19401B1D7CED00791A74 /* SVProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,13 @@
 		A80E192A1B1D7C0100791A74 /* IndicatorSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IndicatorSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A80E192F1B1D7C0100791A74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A80E19301B1D7C0100791A74 /* IndicatorSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorSampleTests.swift; sourceTree = "<group>"; };
+		A80E193B1B1D7CED00791A74 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		A80E193C1B1D7CED00791A74 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		A80E193D1B1D7CED00791A74 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		A80E193E1B1D7CED00791A74 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		A80E193F1B1D7CED00791A74 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		A80E19401B1D7CED00791A74 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		A80E19441B1D7D3100791A74 /* IndicatorSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IndicatorSample-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +69,11 @@
 		A80E190C1B1D7C0100791A74 = {
 			isa = PBXGroup;
 			children = (
+				A80E19441B1D7D3100791A74 /* IndicatorSample-Bridging-Header.h */,
 				A80E19171B1D7C0100791A74 /* IndicatorSample */,
 				A80E192D1B1D7C0100791A74 /* IndicatorSampleTests */,
 				A80E19161B1D7C0100791A74 /* Products */,
+				A80E193A1B1D7CED00791A74 /* SVProgressHUD */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +122,19 @@
 				A80E192F1B1D7C0100791A74 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A80E193A1B1D7CED00791A74 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				A80E193B1B1D7CED00791A74 /* SVIndefiniteAnimatedView.h */,
+				A80E193C1B1D7CED00791A74 /* SVIndefiniteAnimatedView.m */,
+				A80E193D1B1D7CED00791A74 /* SVProgressHUD-Prefix.pch */,
+				A80E193E1B1D7CED00791A74 /* SVProgressHUD.bundle */,
+				A80E193F1B1D7CED00791A74 /* SVProgressHUD.h */,
+				A80E19401B1D7CED00791A74 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +220,7 @@
 				A80E19201B1D7C0100791A74 /* Main.storyboard in Resources */,
 				A80E19251B1D7C0100791A74 /* LaunchScreen.xib in Resources */,
 				A80E19221B1D7C0100791A74 /* Images.xcassets in Resources */,
+				A80E19421B1D7CED00791A74 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +239,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A80E191D1B1D7C0100791A74 /* ViewController.swift in Sources */,
+				A80E19431B1D7CED00791A74 /* SVProgressHUD.m in Sources */,
 				A80E191B1B1D7C0100791A74 /* AppDelegate.swift in Sources */,
+				A80E19411B1D7CED00791A74 /* SVIndefiniteAnimatedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +371,7 @@
 				INFOPLIST_FILE = IndicatorSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IndicatorSample-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -353,6 +382,7 @@
 				INFOPLIST_FILE = IndicatorSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "IndicatorSample-Bridging-Header.h";
 			};
 			name = Release;
 		};
